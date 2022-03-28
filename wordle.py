@@ -16,7 +16,7 @@ random.seed(yesterday)
 yword = random.choice(words).upper()
 
 random.seed(today)
-word = random.choice(words)
+word = random.choice(words).strip()
 
 attemptnum = 1
 prevguesses = []
@@ -129,8 +129,18 @@ log_message('Yesterday\'s word: {}'.format(yword))
 
 # A function to update the keyboard keys as needed
 def update_keyboard(guess):
-    for letter in guess:
-        window[letter].update(disabled=True, button_color='black')
+    for char in range(5):
+        if guess[char] not in word:
+            window[guess[char]].update(disabled=True, button_color='black')
+            print(guess[char], "changed to 'black")
+        elif guess[char] in word and guess[char] != word[char]:
+            window[guess[char]].update(button_color='darkgoldenrod')
+            print(guess[char], "changed to 'darkgoldenrod")
+        elif guess[char] == word[char]:
+            window[guess[char]].update(button_color='green')
+            print(guess[char], "changed to 'green")
+            
+    window.finalize()
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
@@ -218,7 +228,4 @@ while True:
         # Add 1 to the attempt counter
         attemptnum = attemptnum + 1
         
-        
-        
-       
 window.close()
