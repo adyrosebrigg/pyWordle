@@ -212,11 +212,11 @@ while True:
         if guess == word:
             log_message('You won today\'s game in {}! Congrats.'.format(attemptnum))
         
-        # Add 1 to the attempt counter
-        attemptnum = attemptnum + 1
-        
         if attemptnum > 5:
             log_message('Sorry, no win today. Try again tomorrow!')
+            
+        # Add 1 to the attempt counter
+        attemptnum = attemptnum + 1
         
         
         
