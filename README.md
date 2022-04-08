@@ -5,4 +5,4 @@ No I don't play wordle. Yes I reimplemented it in python for funsies based on my
 
 There's a few bugs I have to work out based on input from said friend and my lack of knowledge of wordle as a game, but here's a start. Commented lightly, hopefully most of the stuff I didn't comment yet seems boilerplate enough.
 
-Depends pysimplegui, I've included the current latest version here which I hope? Is allowed for a cc0 licensed project? If anybody knows if I have to relicense please let me know.
+Depends `pysimplegui`, which I've included here under LGPL3. `guesses` and `words` taken from the official Wordle site and are accordingly copyright Josh Wardle. All other code is mine and licensed cc0.
