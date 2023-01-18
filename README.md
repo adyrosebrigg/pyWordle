@@ -1,3 +1,5 @@
+**NOTICE: I have archived this repository along with most of my others because I no longer have time to maintain them. Feel free to fork per the licence of any given repo, and have fun! Hope you can put the code to good use.**
+
 # pyWordle
 No I don't play wordle. Yes I reimplemented it in python for funsies based on my best friend's obsession with it and spinoff games. :^)
 
